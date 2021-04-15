@@ -1,0 +1,17 @@
+.completado{
+    color: greenyellow;
+}
+.aparecer-enter{
+    opacity: 0; /* Entrada*/
+}
+.aparecer-enter-active{
+    transition:  opacity 1s;  /* fade in effect*/
+}
+.aparecer-leave-to{
+   opacity: 0; /* salida s*/
+
+}
+.aparecer-leave-active{
+
+    transition: opacity 1s; /* fade out effect*/
+}

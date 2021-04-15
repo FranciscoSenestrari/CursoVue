@@ -1,0 +1,38 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="main">
+        <h1 v-show="prop">esta todo ok</h1>
+        <p v-if ="age>=18">ADULT time</p>
+        <p v-else>hide in the bush</p>
+        <p></p>
+
+        <hr>
+        <h2>Lista a renderizar</h2>
+        <p>{{lista}}</p>
+        <ul>
+            <li v-for="item in lista">
+                {{item}}
+            </li>
+        </ul>
+        <hr>
+        <h1>Cabezera lista con edad</h1>
+        <ul>
+            <li v-for ="item in objetlist">
+                {{item.nombre}} - {{item.edad}}
+            </li>
+        </ul>
+
+
+
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      <script src="./script.js"></script>
+</body>
+</html>

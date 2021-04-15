@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="app">
+        <h1>Listado de tareas</h1>
+    <button v-on:click="btnMostrar">Aparecer/Ocultar</button>
+    <hr>
+        <transition name="aparecer"> 
+            <ul v-if="mostrar" v-for="item in tareas" v>
+                 <li v-bind:class="{completado: item.state}" v-on:click="completarTarea(item)" v-for= "item in tareas" >
+                    {{item.titulo}}
+                </li>           
+            </ul>
+        </transition>
+        <pre>{{tareas}}</pre>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+</html>
